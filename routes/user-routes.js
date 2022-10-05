@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 //import function
 const {
-    createUser
+    createUser, getAllUsers, getUserbyId
 } = require('../controllers/user-controller');
 
 
@@ -15,13 +15,13 @@ const {
 router
 .route('/')
 
-.get()
+.get(getAllUsers)
 .post(createUser);
 
 //get one route, put route, and delete route
 router
 .route('/:id')
-.get()
+.get(getUserbyId)
 .put()
 .delete();
 
