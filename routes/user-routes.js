@@ -1,6 +1,9 @@
 const router = require('express').Router();
 
-
+//import function
+const {
+    createUser
+} = require('../controllers/user-controller');
 
 
 
@@ -13,7 +16,7 @@ router
 .route('/')
 
 .get()
-.post();
+.post(createUser);
 
 //get one route, put route, and delete route
 router
